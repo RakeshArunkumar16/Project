@@ -1,0 +1,671 @@
+*{
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+box-sizing: border-box;
+}
+body{
+background: #080808;
+color: #fff;
+
+}
+#header
+{
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background.png');
+    background-size: cover;
+   background-position: right;
+
+
+}
+.container
+{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo
+{
+    width: 400px;
+    position: left;
+}
+nav ul li{
+    
+    display: inline-block;
+    list-style: none;
+
+    margin: 10px 20px;
+}
+nav ul li a{
+
+color: #fff;
+text-decoration: none;
+font-size: 20px;
+position: relative;
+}
+
+nav ul li a::after
+{
+content: '';
+width: 0;
+height: 3px;
+background: #ff004f;
+position: absolute;
+left :0;
+bottom: -6px;
+transition: 0.5s;
+}
+nav ul li a:hover::after
+{
+    width: 100%;
+}
+.header-text
+{
+  
+    margin: 10px;
+    margin-top: 2%;
+    font-size: 30px;
+}
+.header-text h1
+{
+    font-size: 20px;
+    margin-top: 10px;
+   
+}
+.header-text h1 span
+{
+    color: #ff004f;
+}
+
+
+
+/* About */
+
+#about
+{
+    margin: 10px 0;
+color: #ababab;
+
+}
+.row
+{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1
+{
+    flex-basis: 30%;
+    
+}
+.about-col-1 img
+{
+margin-bottom: 10%;
+height: 78vh;
+
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2
+{
+    flex-basis:69%;
+}
+.subtitle
+{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.tab-titles
+{
+display: flex;
+margin: 20px 0 40px;
+}
+.tab-links
+{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after
+{
+    content: '';
+    width: 0;
+    height: 4px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after
+{
+width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px;
+}
+
+.tab-contents ul li
+{
+    font-size: 18px;
+}
+
+.tab-contents ul li span
+{
+    color: #e91087;
+    font-size: 20px;
+}
+.tab-contents
+{
+    display: none;  
+}
+.tab-contents.active-tab
+{
+    display: block;
+}
+
+
+/* Services */
+
+#services h1{
+font-size: 60px;
+    padding: 10px 0;
+    }
+
+.serviceslist 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,2fr));
+    grid-gap: 30px;
+    margin-top:50px;
+}
+.serviceslist div{
+    background: #262626;
+    padding: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+
+}
+
+.serviceslist div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.serviceslist div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.serviceslist div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.serviceslist div:hover
+{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+
+
+/* portfolio */
+
+
+#Portfolio
+{
+    padding: 50px 0;
+}
+
+
+
+/* Works */
+
+.workslist
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,2fr));
+    grid-gap: 15px;
+    margin-top:50px;
+
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+}
+.work img{
+height: 80%;
+width: 100%;
+border-radius: 10px;
+display: block;
+transition: transform 0.5s;
+}
+.layer
+{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom :0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.layer p
+{
+    font-size: 20px;
+    font-weight: 500;
+}
+.layer a {
+    margin-top: 20px;
+    color: #ceff53ba;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 60px;
+ 
+    width: 60px;
+    height: 60px;
+    border-radius: 40%;
+    text-align: center;
+}
+.work:hover img{
+    transform:scale(1.1);
+
+
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn
+{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: bacckground 0.5s;
+
+}
+.btn:hover{
+background: #ff004f;
+cursor: pointer;
+}
+
+
+
+
+/* Contact Me */
+
+/* Flex container to align left and right sections */
+.contact-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+/* Other styles */
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.socialicons {
+    margin-top: 30px;
+}
+
+.socialicons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-top: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.socialicons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background-color: #ff004f;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 10px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright
+{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background:#262626;
+    font-weight: 300;
+    margin-top: 20px;
+
+}
+
+
+/* Chatbot button */
+/* Chatbot container */
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+}
+
+#chatbot-btn {
+    background-color: #ff004f;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#chatbot-container {
+    display: none;
+    flex-direction: column;
+    height: 400px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Chatbot header */
+#chatbot-header {
+    background-color: #ff004f;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chatbot-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: white;
+}
+
+#chatbot-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Chatbot messages area */
+#chatbot-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Message bubbles */
+.message {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+/* User's messages (right-aligned) */
+.user-message {
+    background-color: #4caf50;
+    color: white;
+    align-self: flex-end;
+    text-align: right;
+}
+
+/* Bot's messages (left-aligned) */
+.bot-message {
+    background-color: #444;
+    color: white;
+    align-self: flex-start;
+    text-align: left;
+}
+
+/* Chatbot input */
+#chatbot-input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    border-top: 1px solid #444;
+    background-color: #262626;
+    color: #fff;
+}
+
+
+
+
+/* Suggestion button styles */
+/* Suggestions container styling */
+#suggestions-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #333;
+    border-top: 1px solid #444;
+}
+
+.suggestion {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px 3px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.suggestion:hover {
+    background-color: #777;
+}
+
+
+
+
+
+/*  Copyright*/
+.copyright i{
+    color: #ff004f;
+}
+
+
+
+
+
+/*  CSS  For Small Screen mobiles */
+
+nav .fa-bars {
+    display: none; /* Hide the menu icon when the menu is visible */
+}
+
+nav .fa-xmark {
+    display: none; /* Initially hide the close button */
+}
+
+@media only screen and (max-width: 600px) {
+    nav .fa-bars {
+        display: block;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    nav #sidemenu {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        transition: right 0.5s;
+        z-index: 2;
+    }
+    .header-text h1
+    {
+        font-size: 15px;
+    }
+
+    nav #sidemenu li {
+        display: block;
+        margin: 25px;
+    }
+
+    /* Positioning the close button at the top-left of the side menu */
+    nav #sidemenu .fa-xmark {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 12px;
+        color: white;
+        cursor: pointer;
+        z-index: 3; /* Ensure it's above other elements */
+    }
+
+    /* Styling when the menu is open */
+    nav.open #sidemenu {
+        right: 0;
+    }
+
+    /* When the menu is open, hide the 'bars' icon */
+    nav.open .fa-bars {
+        display: none;
+    }
+
+    /* When the menu is open, show the 'xmark' icon */
+    nav.open .fa-xmark {
+        display: block;
+    }
+
+    
+.subtitle
+{
+    font-size: 40px;
+
+}
+#services h1
+{
+    font-size: 35px;
+}
+.about-col-1, .about-col-2
+{
+flex-basis: 100%;
+}
+.about-col-1
+{
+    margin-bottom: 30px;
+
+}
+.about-col-2
+{
+    font-size: 14px;
+}
+.tab-links
+{
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.contact-left, .contact-right
+{
+    flex-basis: 100%;
+}
+
+.copyright
+{
+    font-size: 14px;
+}
+#msg
+{
+    color: #9052b7;
+margin-top: 10px;
+display: block;
+}
+
+
+
+
+}
