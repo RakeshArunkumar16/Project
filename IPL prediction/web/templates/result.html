@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Favicon -->
+     <link href="img/favicon.ico" rel="icon">
+
+     <!-- Google Web Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+ 
+     <!-- Icon Font Stylesheet -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+ 
+     <!-- Libraries Stylesheet -->
+     <link href="{{ url_for('static', filename='lib/animate/animate.min.css')}}" rel="stylesheet">
+     <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+ 
+     <!-- Customized Bootstrap Stylesheet -->
+     <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+ 
+     <!-- Template Stylesheet -->
+     <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+     <style>
+         /* Styles for form container */
+ .login {
+     width: 100%;
+     max-width: 800px;
+     margin: 0 auto;
+     padding: 20px;
+     background-color: #fff;
+     border-radius: 8px;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+ }
+ 
+ /* Styles for form headings */
+ .login h1 {
+     font-size: 24px;
+     color: #333;
+     text-align: center;
+     margin-bottom: 20px;
+ }
+ 
+ /* Styles for form labels */
+ .login label {
+     display: block;
+     font-size: 16px;
+     color: #555;
+     margin-bottom: 8px;
+ }
+ 
+ /* Styles for form inputs */
+ .login input[type="text"],
+ .login input[type="number"],
+ .login input[type="submit"] {
+     width: 100%;
+     padding: 10px;
+     margin-bottom: 20px;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+     font-size: 16px;
+ }
+ 
+ /* Styles for submit button */
+ .login input[type="submit"] {
+     background-color: #06BBCC;
+     color: #fff;
+     border: none;
+     cursor: pointer;
+     transition: background-color 0.3s;
+ }
+ 
+ .login input[type="submit"]:hover {
+     background-color: #0056b3;
+ }
+ 
+     </style>
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p>The predicted result is: {{ result }}</p>
+    <a href="/">Go back to the main page</a>
+</body>
+</html>
